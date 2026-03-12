@@ -1,4 +1,4 @@
-# CTD System ROS 2
+# MonitorCTD System ROS 2
 
 Projekt przedstawia prosty system akwizycji danych CTD oparty o ROS 2 Humble, dwa urządzenia ESP32, własne interfejsy ROS oraz webowy panel monitoringu zbudowany we Flasku.
 
