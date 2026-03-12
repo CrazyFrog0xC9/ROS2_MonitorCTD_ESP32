@@ -174,53 +174,12 @@ Porty:
 
 ## Firmware ESP32
 
-Folder `firmware/` jest przeznaczony na szkice Arduino IDE lub inne pliki firmware dla urządzeń ESP32.
+Katalog `firmware/`zawiera szkice Arduino IDE dla urządzeń ESP32 działających jako węzły micro-ROS.
+Firmware esp32_1 realizuje następujące zadania:
 
-Zalecana organizacja:
+Inicjalizuje czujnik MonitorCTD+ przez UART2 (RS232), wysyłając sekwencję komend startowych (tryb ciągły 4 Hz, zerowanie, START).
+Łączy się z brokerem micro-ROS przez Wi-Fi (UDP) i rejestruje węzeł ROS 2.
+Publikuje surowe linie danych z czujnika na topicu ctd_raw jako std_msgs/String.
+Subskrybuje topic start_stop (std_msgs/Bool) — umożliwia zdalne włączanie i wyłączanie transmisji danych.
 
-- `firmware/esp32_1/`
-- `firmware/esp32_2/`
 
-Jeśli firmware jest kluczową częścią projektu, warto dodać tam:
-
-- pliki `.ino`
-- używane biblioteki
-- opis konfiguracji portu i prędkości transmisji
-- mapowanie urządzenia do odpowiednich topiców ROS
-
-## Najważniejsze pliki
-
-- `src/ctd_interfaces/msg/CtdMeasurement.msg`
-- `src/ctd_interfaces/srv/SetAcquisition.srv`
-- `src/ctd_interfaces/action/AcquireData.action`
-- `src/ctd_system/launch/system.launch.py`
-- `src/ctd_system/ctd_system/sensor_bridge_node.py`
-- `src/ctd_system/ctd_system/command_service.py`
-- `src/ctd_system/ctd_system/acquire_action_server.py`
-- `src/ctd_system/ctd_system/web_app.py`
-- `src/ctd_system/ctd_system/templates/index.html`
-- `docker-compose.yml`
-- `Dockerfile`
-
-## Co pokazuje ten projekt pod kątem wymagań ROS 2
-
-- Topics: tak
-- Launch: tak
-- Service - Client: tak
-- Własne wiadomości: tak
-- Actions: tak
-- Docker: tak
-- GitHub: tak
-
-## Dalszy rozwój
-
-Naturalne kierunki rozbudowy:
-
-- integracja firmware ESP32 bezpośrednio z dokumentacją repozytorium
-- zapis pomiarów do pliku CSV lub bazy danych
-- dodanie testów integracyjnych dla Service i Action
-- dodanie statusu Action w webowym dashboardzie
-
-## Autor
-
-Projekt przygotowany jako system demonstracyjny ROS 2 dla akwizycji danych CTD z wykorzystaniem ESP32, własnych interfejsów i webowego dashboardu.
