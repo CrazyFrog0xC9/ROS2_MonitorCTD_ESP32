@@ -1,85 +1,82 @@
-# MonitorCTD System ROS 2
+# CTD System ROS 2
 
-Projekt przedstawia prosty system akwizycji danych CTD oparty o ROS 2 Humble, dwa urządzenia ESP32, własne interfejsy ROS oraz webowy panel monitoringu zbudowany we Flasku.
+Projekt przedstawia system akwizycji danych z czujnika **Valeport-Teledyne MonitorCTD+**, zbudowany w oparciu o **ROS 2 Humble**, dwa mikrokontrolery **ESP32**, własne interfejsy ROS 2 oraz webowy panel monitoringu napisany w Pythonie z użyciem **Flask**.
 
-System zbiera dane z dwóch węzłów ESP32, przetwarza je do własnej wiadomości ROS, udostępnia sterowanie akwizycją przez Service, realizuje sesje czasowe przez Action i prezentuje dane w panelu WWW.
+MonitorCTD+ komunikuje się z otoczeniem przez protokół **RS232**. Po podłączeniu przez konwerter RS232–UART możliwa jest komunikacja z dowolnym mikrokontrolerem obsługującym UART. Zarówno transmisja danych, jak i zasilanie pochodzi z samego urządzenia MonitorCTD+. ESP32 na starcie konfiguruje urządzenie przez wysłanie odpowiednich komend inicjalizacyjnych, a następnie rozpoczyna zbieranie danych — wystawia węzły ROS 2 przez sieć Wi-Fi, przetwarza odczyty do własnego formatu wiadomości, udostępnia sterowanie akwizycją przez serwis ROS 2, realizuje sesje czasowe przez akcje ROS 2 oraz prezentuje dane w panelu WWW.
+
+---
 
 ## Zakres projektu
 
-Projekt obejmuje:
+- **Topics** — odbiór surowych danych, publikacja przetworzonych pomiarów oraz wysyłanie komend start/stop.
+- **Launch file** — uruchamia główne węzły systemu jednym poleceniem.
+- **Service / Client** — sterowanie rozpoczęciem i zatrzymaniem akwizycji.
+- **Własne interfejsy ROS 2** — dedykowana wiadomość, serwis i akcja.
+- **Action** — realizacja czasowej sesji zbierania danych z monitorowaniem postępu.
+- **Web UI** — panel podglądu pomiarów i sterowania systemem w czasie rzeczywistym.
+- **Docker / Docker Compose** — konteneryzacja środowiska uruchomieniowego.
+- **Firmware ESP32** — miejsce na szkice dla obu urządzeń używanych w systemie.
 
-- Topics do odbioru surowych danych, publikacji danych przetworzonych i wysyłania komend start/stop.
-- Launch file uruchamiający główne węzły systemu.
-- Service-Client do sterowania rozpoczęciem i zatrzymaniem akwizycji.
-- Własne interfejsy ROS 2: wiadomość, serwis i action.
-- Action do realizacji czasowej sesji zbierania danych.
-- Web UI do podglądu pomiarów i sterowania systemem.
-- Docker i Docker Compose do uruchamiania środowiska.
-- Miejsce na firmware ESP32 używany razem z systemem.
+---
 
 ## Architektura
 
-Główne elementy systemu:
+| Węzeł | Rola |
+|---|---|
+| `sensor_bridge` | Odbiera surowe dane z ESP32 i publikuje przetworzone wiadomości `CtdMeasurement` |
+| `command_service` | Udostępnia serwis `set_acquisition` do włączania i wyłączania akwizycji |
+| `acquire_action_server` | Realizuje akcję `AcquireData` — uruchamia akwizycję na zadany czas, monitoruje napływ próbek i zatrzymuje ją po upływie sesji |
+| `web_app` | Prezentuje dashboard WWW, korzysta z serwisu i akcji jako klient ROS 2 |
+| `microros_agent` | Osobny kontener do komunikacji z urządzeniami micro-ROS |
 
-- `sensor_bridge` odbiera surowe dane z ESP32 i publikuje przetworzoną wiadomość `CtdMeasurement`.
-- `command_service` udostępnia serwis `set_acquisition`, który włącza lub wyłącza akwizycję.
-- `acquire_action_server` realizuje action `AcquireData`, uruchamia akwizycję na zadany czas, monitoruje napływ próbek i zatrzymuje akwizycję po zakończeniu.
-- `web_app` prezentuje dashboard WWW i korzysta z Service oraz Action jako klient ROS.
-- `microros_agent` może być uruchamiany jako osobny kontener do komunikacji z urządzeniami micro-ROS.
+---
 
 ## Interfejsy ROS 2
 
-Pakiet `ctd_interfaces` definiuje własne typy używane w projekcie:
+Pakiet `ctd_interfaces` definiuje własne typy wykorzystywane w projekcie.
 
 ### Wiadomość `CtdMeasurement`
 
-Przenosi pojedynczy pomiar CTD:
+Przenosi pojedynczy pomiar z czujnika CTD:
 
-- `sensor_id`
-- `stamp`
-- `temperature`
-- `conductivity`
-- `pressure`
-- `turbidity`
-- `valid`
-- `raw_line`
+| Pole | Opis |
+|---|---|
+| `sensor_id` | Identyfikator czujnika |
+| `stamp` | Znacznik czasu pomiaru |
+| `temperature` | Temperatura |
+| `conductivity` | Przewodność |
+| `pressure` | Ciśnienie |
+| `turbidity` | Zmętnienie |
+| `valid` | Flaga poprawności danych |
+| `raw_line` | Surowa linia danych z urządzenia |
 
 ### Serwis `SetAcquisition`
 
-Służy do sterowania akwizycją:
+Steruje akwizycją danych:
 
-Request:
-- `target`
-- `enable`
+**Request:** `target`, `enable`
+**Response:** `success`, `message`
 
-Response:
-- `success`
-- `message`
+### Akcja `AcquireData`
 
-### Action `AcquireData`
+Realizuje czasową sesję akwizycji:
 
-Realizuje sesję czasową akwizycji:
+**Goal:** `target`, `duration_sec`
+**Result:** `success`, `summary`
+**Feedback:** `progress`, `status`
 
-Goal:
-- `target`
-- `duration_sec`
-
-Result:
-- `success`
-- `summary`
-
-Feedback:
-- `progress`
-- `status`
+---
 
 ## Przepływ danych
 
 1. ESP32 publikuje surowe dane pomiarowe.
-2. `sensor_bridge` odbiera dane raw, parsuje je i publikuje `CtdMeasurement`.
+2. `sensor_bridge` parsuje dane i publikuje wiadomości `CtdMeasurement`.
 3. `web_app` subskrybuje przetworzone dane i aktualizuje dashboard.
-4. Użytkownik może z poziomu UI wywołać START/STOP przez Service.
-5. Użytkownik może uruchomić czasową akwizycję przez Action.
-6. Action wysyła START, monitoruje liczbę odebranych próbek i po czasie wykonuje STOP.
+4. Użytkownik może z poziomu UI wywołać START/STOP przez serwis.
+5. Użytkownik może uruchomić czasową sesję akwizycji przez akcję.
+6. Akcja wysyła komendę START, monitoruje liczbę odebranych próbek i po upływie czasu wykonuje STOP.
+
+---
 
 ## Struktura repozytorium
 
@@ -98,88 +95,53 @@ ros2_humble_ws/
 └── log/
 ```
 
-## Uruchomienie lokalne
+---
 
-Wymagania:
+## Uruchomienie
 
-- Ubuntu lub macOS z Dockerem i ROS 2 Humble
-- `colcon`
-- Python z Flaskiem
+### Lokalnie
 
-Budowanie workspace:
+**Wymagania:** Ubuntu z ROS 2 Humble, `colcon`, Python z Flask.
 
 ```bash
-cd /Users/mikolaj/ros2_humble_ws
+cd ~/ros2_humble_ws/ws
 colcon build --packages-select ctd_interfaces ctd_system
 source install/setup.bash
-```
-
-Uruchomienie systemu:
-
-```bash
 ros2 launch ctd_system system.launch.py
 ```
 
-Po uruchomieniu panel WWW jest dostępny pod adresem:
+Panel WWW dostępny pod adresem: **http://localhost:5001**
 
-```text
-http://localhost:5000
-```
+---
 
-## Uruchomienie w Dockerze
-
-### Sam kontener aplikacji
-
-Budowanie obrazu:
+### Docker
 
 ```bash
 docker build -t ctd_app .
-```
-
-Uruchomienie:
-
-```bash
 docker run -it --rm --name ctd_app -p 5001:5000 ctd_app
 ```
 
-Panel WWW:
+---
 
-```text
-http://localhost:5001
-```
-
-### Docker Compose z micro-ROS Agent
-
-W repozytorium znajduje się `docker-compose.yml`, który uruchamia:
-
-- `ctd_app`
-- `microros_agent`
-
-Start:
+### Docker Compose (z micro-ROS Agent)
 
 ```bash
-docker compose up --build
+docker compose up --build   # uruchomienie
+docker compose down         # zatrzymanie
 ```
 
-Stop:
+| Port | Usługa |
+|---|---|
+| `5001/tcp` | Web application |
+| `8888/udp` | micro-ROS Agent |
 
-```bash
-docker compose down
-```
-
-Porty:
-
-- `5001/tcp` - web application
-- `8888/udp` - micro-ROS Agent
+---
 
 ## Firmware ESP32
-
-Katalog `firmware/`zawiera szkice Arduino IDE dla urządzeń ESP32 działających jako węzły micro-ROS.
-Firmware esp32_1 realizuje następujące zadania:
+Katalog `firmware/`  zawiera szkice Arduino IDE dla urządzeń ESP32 działających jako węzły micro-ROS.
+Firmware esp32_x realizuje następujące zadania:
 
 Inicjalizuje czujnik MonitorCTD+ przez UART2 (RS232), wysyłając sekwencję komend startowych (tryb ciągły 4 Hz, zerowanie, START).
 Łączy się z brokerem micro-ROS przez Wi-Fi (UDP) i rejestruje węzeł ROS 2.
 Publikuje surowe linie danych z czujnika na topicu ctd_raw jako std_msgs/String.
 Subskrybuje topic start_stop (std_msgs/Bool) — umożliwia zdalne włączanie i wyłączanie transmisji danych.
-
-
