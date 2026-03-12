@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from ctd_interfaces/msg/CtdMeasurement.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module ctd_interfaces {
+  module msg {
+    struct CtdMeasurement {
+      string sensor_id;
+
+      builtin_interfaces::msg::Time stamp;
+
+      float temperature;
+
+      float conductivity;
+
+      float pressure;
+
+      float turbidity;
+
+      boolean valid;
+
+      string raw_line;
+    };
+  };
+};

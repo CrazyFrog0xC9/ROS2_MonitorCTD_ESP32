@@ -1,0 +1,3 @@
+/ws/build/ctd_interfaces/rosidl_adapter/ctd_interfaces:msg/CtdMeasurement.idl
+/ws/build/ctd_interfaces/rosidl_adapter/ctd_interfaces:srv/SetAcquisition.idl
+/ws/build/ctd_interfaces/rosidl_adapter/ctd_interfaces:action/AcquireData.idl

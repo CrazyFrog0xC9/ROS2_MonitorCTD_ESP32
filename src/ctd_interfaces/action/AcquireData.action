@@ -1,0 +1,8 @@
+string target
+int32 duration_sec
+---
+bool success
+string summary
+---
+float32 progress
+string status

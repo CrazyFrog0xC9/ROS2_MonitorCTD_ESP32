@@ -1,0 +1,8 @@
+[console_scripts]
+acquire_action_client = ctd_system.acquire_action_client:main
+acquire_action_server = ctd_system.acquire_action_server:main
+command_client = ctd_system.command_client:main
+command_service = ctd_system.command_service:main
+sensor_bridge = ctd_system.sensor_bridge_node:main
+web_app = ctd_system.web_app:main
+

@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from ctd_interfaces/action/AcquireData.action
+// generated code does not contain a copyright notice
+
+
+module ctd_interfaces {
+  module action {
+    struct AcquireData_Goal {
+      string target;
+
+      int32 duration_sec;
+    };
+    struct AcquireData_Result {
+      boolean success;
+
+      string summary;
+    };
+    struct AcquireData_Feedback {
+      float progress;
+
+      string status;
+    };
+  };
+};

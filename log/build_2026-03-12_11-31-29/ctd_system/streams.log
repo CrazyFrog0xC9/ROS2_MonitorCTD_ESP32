@@ -1,0 +1,39 @@
+[0.502s] Invoking command in '/ws/src/ctd_system': PYTHONPATH=/ws/build/ctd_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/ctd_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ctd_system build --build-base /ws/build/ctd_system/build install --record /ws/build/ctd_system/install.log --single-version-externally-managed install_data
+[0.674s] running egg_info
+[0.674s] creating ../../build/ctd_system/ctd_system.egg-info
+[0.675s] writing ../../build/ctd_system/ctd_system.egg-info/PKG-INFO
+[0.676s] writing dependency_links to ../../build/ctd_system/ctd_system.egg-info/dependency_links.txt
+[0.676s] writing entry points to ../../build/ctd_system/ctd_system.egg-info/entry_points.txt
+[0.677s] writing requirements to ../../build/ctd_system/ctd_system.egg-info/requires.txt
+[0.677s] writing top-level names to ../../build/ctd_system/ctd_system.egg-info/top_level.txt
+[0.677s] writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'
+[0.679s] reading manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'
+[0.680s] writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'
+[0.680s] running build
+[0.680s] running build_py
+[0.680s] creating /ws/build/ctd_system/build
+[0.681s] creating /ws/build/ctd_system/build/lib
+[0.681s] creating /ws/build/ctd_system/build/lib/ctd_system
+[0.681s] copying ctd_system/__init__.py -> /ws/build/ctd_system/build/lib/ctd_system
+[0.682s] running install
+[0.682s] running install_lib
+[0.683s] creating /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.683s] copying /ws/build/ctd_system/build/lib/ctd_system/__init__.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.684s] byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/__init__.py to __init__.cpython-310.pyc
+[0.685s] running install_data
+[0.685s] creating /ws/install/ctd_system/share/ament_index
+[0.686s] creating /ws/install/ctd_system/share/ament_index/resource_index
+[0.686s] creating /ws/install/ctd_system/share/ament_index/resource_index/packages
+[0.686s] copying resource/ctd_system -> /ws/install/ctd_system/share/ament_index/resource_index/packages
+[0.686s] copying package.xml -> /ws/install/ctd_system/share/ctd_system
+[0.688s] creating /ws/install/ctd_system/share/ctd_system/launch
+[0.688s] running install_egg_info
+[0.688s] Copying ../../build/ctd_system/ctd_system.egg-info to /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system-0.0.1-py3.10.egg-info
+[0.693s] running install_scripts
+[0.711s] Installing acquire_action_client script to /ws/install/ctd_system/lib/ctd_system
+[0.711s] Installing acquire_action_server script to /ws/install/ctd_system/lib/ctd_system
+[0.712s] Installing command_client script to /ws/install/ctd_system/lib/ctd_system
+[0.712s] Installing command_service script to /ws/install/ctd_system/lib/ctd_system
+[0.713s] Installing sensor_bridge script to /ws/install/ctd_system/lib/ctd_system
+[0.714s] writing list of installed files to '/ws/build/ctd_system/install.log'
+[0.728s] Invoked command in '/ws/src/ctd_system' returned '0': PYTHONPATH=/ws/build/ctd_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/ctd_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ctd_system build --build-base /ws/build/ctd_system/build install --record /ws/build/ctd_system/install.log --single-version-externally-managed install_data

@@ -1,0 +1,68 @@
+[0.000000] (-) TimerEvent: {}
+[0.001278] (-) JobUnselected: {'identifier': 'ctd_interfaces'}
+[0.001715] (ctd_system) JobQueued: {'identifier': 'ctd_system', 'dependencies': OrderedDict([('ctd_interfaces', '/ws/install/ctd_interfaces')])}
+[0.002283] (ctd_system) JobStarted: {'identifier': 'ctd_system'}
+[0.098712] (-) TimerEvent: {}
+[0.203678] (-) TimerEvent: {}
+[0.306393] (-) TimerEvent: {}
+[0.409660] (-) TimerEvent: {}
+[0.501544] (ctd_system) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ctd_system', 'build', '--build-base', '/ws/build/ctd_system/build', 'install', '--record', '/ws/build/ctd_system/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/ws/src/ctd_system', 'env': {'HOSTNAME': '5bfa9589eec1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/ws/install/ctd_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/ws', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/ws/install/ctd_system:/ws/install/ctd_interfaces:/opt/ros/humble', 'PWD': '/ws/build/ctd_system', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ws/build/ctd_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/ctd_system/lib/python3.10/site-packages:/ws/install/ctd_system/lib/python3.10/site-packages:/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/ws/install/ctd_interfaces'}, 'shell': False}
+[0.510622] (-) TimerEvent: {}
+[0.617671] (-) TimerEvent: {}
+[0.683132] (ctd_system) StdoutLine: {'line': b'running egg_info\n'}
+[0.683903] (ctd_system) StdoutLine: {'line': b'creating ../../build/ctd_system/ctd_system.egg-info\n'}
+[0.684270] (ctd_system) StdoutLine: {'line': b'writing ../../build/ctd_system/ctd_system.egg-info/PKG-INFO\n'}
+[0.685150] (ctd_system) StdoutLine: {'line': b'writing dependency_links to ../../build/ctd_system/ctd_system.egg-info/dependency_links.txt\n'}
+[0.685608] (ctd_system) StdoutLine: {'line': b'writing entry points to ../../build/ctd_system/ctd_system.egg-info/entry_points.txt\n'}
+[0.686117] (ctd_system) StdoutLine: {'line': b'writing requirements to ../../build/ctd_system/ctd_system.egg-info/requires.txt\n'}
+[0.686435] (ctd_system) StdoutLine: {'line': b'writing top-level names to ../../build/ctd_system/ctd_system.egg-info/top_level.txt\n'}
+[0.686804] (ctd_system) StdoutLine: {'line': b"writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'\n"}
+[0.688423] (ctd_system) StdoutLine: {'line': b"reading manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'\n"}
+[0.689288] (ctd_system) StdoutLine: {'line': b"writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'\n"}
+[0.689468] (ctd_system) StdoutLine: {'line': b'running build\n'}
+[0.689672] (ctd_system) StdoutLine: {'line': b'running build_py\n'}
+[0.689848] (ctd_system) StdoutLine: {'line': b'creating /ws/build/ctd_system/build\n'}
+[0.690209] (ctd_system) StdoutLine: {'line': b'creating /ws/build/ctd_system/build/lib\n'}
+[0.690614] (ctd_system) StdoutLine: {'line': b'creating /ws/build/ctd_system/build/lib/ctd_system\n'}
+[0.690859] (ctd_system) StdoutLine: {'line': b'copying ctd_system/command_service.py -> /ws/build/ctd_system/build/lib/ctd_system\n'}
+[0.691234] (ctd_system) StdoutLine: {'line': b'copying ctd_system/command_client.py -> /ws/build/ctd_system/build/lib/ctd_system\n'}
+[0.691729] (ctd_system) StdoutLine: {'line': b'copying ctd_system/acquire_action_client.py -> /ws/build/ctd_system/build/lib/ctd_system\n'}
+[0.692176] (ctd_system) StdoutLine: {'line': b'copying ctd_system/sensor_bridge_node.py -> /ws/build/ctd_system/build/lib/ctd_system\n'}
+[0.692595] (ctd_system) StdoutLine: {'line': b'copying ctd_system/__init__.py -> /ws/build/ctd_system/build/lib/ctd_system\n'}
+[0.692987] (ctd_system) StdoutLine: {'line': b'copying ctd_system/acquire_action_server.py -> /ws/build/ctd_system/build/lib/ctd_system\n'}
+[0.693782] (ctd_system) StdoutLine: {'line': b'running install\n'}
+[0.694473] (ctd_system) StdoutLine: {'line': b'running install_lib\n'}
+[0.694909] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[0.695164] (ctd_system) StdoutLine: {'line': b'copying /ws/build/ctd_system/build/lib/ctd_system/command_service.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[0.695786] (ctd_system) StdoutLine: {'line': b'copying /ws/build/ctd_system/build/lib/ctd_system/command_client.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[0.696362] (ctd_system) StdoutLine: {'line': b'copying /ws/build/ctd_system/build/lib/ctd_system/acquire_action_client.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[0.696902] (ctd_system) StdoutLine: {'line': b'copying /ws/build/ctd_system/build/lib/ctd_system/sensor_bridge_node.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[0.697451] (ctd_system) StdoutLine: {'line': b'copying /ws/build/ctd_system/build/lib/ctd_system/__init__.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[0.698161] (ctd_system) StdoutLine: {'line': b'copying /ws/build/ctd_system/build/lib/ctd_system/acquire_action_server.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[0.699087] (ctd_system) StdoutLine: {'line': b'byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/command_service.py to command_service.cpython-310.pyc\n'}
+[0.702711] (ctd_system) StdoutLine: {'line': b'byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/command_client.py to command_client.cpython-310.pyc\n'}
+[0.704123] (ctd_system) StdoutLine: {'line': b'byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/acquire_action_client.py to acquire_action_client.cpython-310.pyc\n'}
+[0.705152] (ctd_system) StdoutLine: {'line': b'byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/sensor_bridge_node.py to sensor_bridge_node.cpython-310.pyc\n'}
+[0.706119] (ctd_system) StdoutLine: {'line': b'byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/__init__.py to __init__.cpython-310.pyc\n'}
+[0.706922] (ctd_system) StdoutLine: {'line': b'byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/acquire_action_server.py to acquire_action_server.cpython-310.pyc\n'}
+[0.707976] (ctd_system) StdoutLine: {'line': b'running install_data\n'}
+[0.708230] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/share/ament_index\n'}
+[0.708524] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/share/ament_index/resource_index\n'}
+[0.708739] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/share/ament_index/resource_index/packages\n'}
+[0.708930] (ctd_system) StdoutLine: {'line': b'copying resource/ctd_system -> /ws/install/ctd_system/share/ament_index/resource_index/packages\n'}
+[0.709157] (ctd_system) StdoutLine: {'line': b'copying package.xml -> /ws/install/ctd_system/share/ctd_system\n'}
+[0.709661] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/share/ctd_system/launch\n'}
+[0.709902] (ctd_system) StdoutLine: {'line': b'copying launch/system.launch.py -> /ws/install/ctd_system/share/ctd_system/launch\n'}
+[0.710795] (ctd_system) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.711681] (ctd_system) StdoutLine: {'line': b'Copying ../../build/ctd_system/ctd_system.egg-info to /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system-0.0.1-py3.10.egg-info\n'}
+[0.715656] (ctd_system) StdoutLine: {'line': b'running install_scripts\n'}
+[0.718610] (-) TimerEvent: {}
+[0.734408] (ctd_system) StdoutLine: {'line': b'Installing acquire_action_client script to /ws/install/ctd_system/lib/ctd_system\n'}
+[0.735080] (ctd_system) StdoutLine: {'line': b'Installing acquire_action_server script to /ws/install/ctd_system/lib/ctd_system\n'}
+[0.735611] (ctd_system) StdoutLine: {'line': b'Installing command_client script to /ws/install/ctd_system/lib/ctd_system\n'}
+[0.736086] (ctd_system) StdoutLine: {'line': b'Installing command_service script to /ws/install/ctd_system/lib/ctd_system\n'}
+[0.736555] (ctd_system) StdoutLine: {'line': b'Installing sensor_bridge script to /ws/install/ctd_system/lib/ctd_system\n'}
+[0.737436] (ctd_system) StdoutLine: {'line': b"writing list of installed files to '/ws/build/ctd_system/install.log'\n"}
+[0.752107] (ctd_system) CommandEnded: {'returncode': 0}
+[0.763220] (ctd_system) JobEnded: {'identifier': 'ctd_system', 'rc': 0}
+[0.764235] (-) EventReactorShutdown: {}

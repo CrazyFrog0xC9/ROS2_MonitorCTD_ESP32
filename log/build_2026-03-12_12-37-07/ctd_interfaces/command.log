@@ -1,0 +1,4 @@
+Invoking command in '/ws/build/ctd_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ws/build/ctd_interfaces -- -j10 -l10
+Invoked command in '/ws/build/ctd_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ws/build/ctd_interfaces -- -j10 -l10
+Invoking command in '/ws/build/ctd_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ws/build/ctd_interfaces
+Invoked command in '/ws/build/ctd_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ws/build/ctd_interfaces

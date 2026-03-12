@@ -1,0 +1,17 @@
+services:
+  ctd_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ctd_app
+    ports:
+      - "5001:5000"
+    restart: unless-stopped
+
+  microros_agent:
+    image: microros/micro-ros-agent:humble
+    container_name: microros_agent
+    command: ["udp4", "--port", "8888"]
+    ports:
+      - "8888:8888/udp"
+    restart: unless-stopped

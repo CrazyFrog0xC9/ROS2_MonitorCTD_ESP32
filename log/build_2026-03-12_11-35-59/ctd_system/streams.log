@@ -1,0 +1,26 @@
+[0.511s] Invoking command in '/ws/src/ctd_system': PYTHONPATH=/ws/build/ctd_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/ctd_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ctd_system build --build-base /ws/build/ctd_system/build install --record /ws/build/ctd_system/install.log --single-version-externally-managed install_data
+[0.682s] running egg_info
+[0.683s] writing ../../build/ctd_system/ctd_system.egg-info/PKG-INFO
+[0.683s] writing dependency_links to ../../build/ctd_system/ctd_system.egg-info/dependency_links.txt
+[0.683s] writing entry points to ../../build/ctd_system/ctd_system.egg-info/entry_points.txt
+[0.684s] writing requirements to ../../build/ctd_system/ctd_system.egg-info/requires.txt
+[0.684s] writing top-level names to ../../build/ctd_system/ctd_system.egg-info/top_level.txt
+[0.686s] reading manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'
+[0.687s] writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'
+[0.687s] running build
+[0.687s] running build_py
+[0.688s] running install
+[0.688s] running install_lib
+[0.689s] running install_data
+[0.689s] copying launch/system.launch.py -> /ws/install/ctd_system/share/ctd_system/launch
+[0.690s] running install_egg_info
+[0.690s] removing '/ws/install/ctd_system/lib/python3.10/site-packages/ctd_system-0.0.1-py3.10.egg-info' (and everything under it)
+[0.691s] Copying ../../build/ctd_system/ctd_system.egg-info to /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system-0.0.1-py3.10.egg-info
+[0.697s] running install_scripts
+[0.715s] Installing acquire_action_client script to /ws/install/ctd_system/lib/ctd_system
+[0.715s] Installing acquire_action_server script to /ws/install/ctd_system/lib/ctd_system
+[0.716s] Installing command_client script to /ws/install/ctd_system/lib/ctd_system
+[0.716s] Installing command_service script to /ws/install/ctd_system/lib/ctd_system
+[0.716s] Installing sensor_bridge script to /ws/install/ctd_system/lib/ctd_system
+[0.720s] writing list of installed files to '/ws/build/ctd_system/install.log'
+[0.735s] Invoked command in '/ws/src/ctd_system' returned '0': PYTHONPATH=/ws/build/ctd_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/ctd_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ctd_system build --build-base /ws/build/ctd_system/build install --record /ws/build/ctd_system/install.log --single-version-externally-managed install_data

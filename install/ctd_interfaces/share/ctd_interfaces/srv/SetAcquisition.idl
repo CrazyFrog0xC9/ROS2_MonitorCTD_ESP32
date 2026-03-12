@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from ctd_interfaces/srv/SetAcquisition.srv
+// generated code does not contain a copyright notice
+
+
+module ctd_interfaces {
+  module srv {
+    struct SetAcquisition_Request {
+      string target;
+
+      boolean enable;
+    };
+    struct SetAcquisition_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

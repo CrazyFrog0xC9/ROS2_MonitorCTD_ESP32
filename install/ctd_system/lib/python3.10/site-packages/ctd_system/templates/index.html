@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Monitor CTD — Dwa ESP32</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0c0e13;
+      --surface:   #13161d;
+      --surface2:  #1a1e27;
+      --border:    #252a35;
+      --border-hi: #363d4d;
+      --text:      #e4e7ed;
+      --text-dim:  #6b7280;
+      --text-mute: #3e4451;
+
+      --turb:   #22d3ee;
+      --turb-bg: rgba(34,211,238,0.08);
+      --pres:   #a78bfa;
+      --pres-bg: rgba(167,139,250,0.08);
+      --temp:   #fb923c;
+      --temp-bg: rgba(251,146,60,0.08);
+      --cond:   #4ade80;
+      --cond-bg: rgba(74,222,128,0.08);
+
+      --green: #22c55e;
+      --red:   #ef4444;
+      --amber: #f59e0b;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(34,211,238,0.06), transparent 28%),
+        radial-gradient(circle at top right, rgba(167,139,250,0.07), transparent 32%),
+        var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 28px;
+    }
+
+    .shell {
+      max-width: 1500px;
+      margin: 0 auto;
+      display: grid;
+      gap: 22px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .title-wrap h1 {
+      font-size: clamp(1.8rem, 2.2vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin-top: 8px;
+      color: var(--text-dim);
+      font-size: 0.96rem;
+    }
+
+    .status-cluster {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .conn-box, .bulk-actions {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      backdrop-filter: blur(12px);
+    }
+
+    .conn-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 999px;
+      background: var(--green);
+      box-shadow: 0 0 0 4px rgba(34,197,94,0.18);
+    }
+    .conn-dot.off {
+      background: var(--red);
+      box-shadow: 0 0 0 4px rgba(239,68,68,0.16);
+    }
+
+    .bulk-actions {
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      padding: 10px 15px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      transition: .18s ease;
+      color: white;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn.start { background: linear-gradient(135deg, #16a34a, #22c55e); }
+    .btn.stop  { background: linear-gradient(135deg, #dc2626, #ef4444); }
+    .btn.export {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border-color: var(--border-hi);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015)),
+        var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.28);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(145deg, rgba(255,255,255,0.04), transparent 28%);
+      pointer-events: none;
+    }
+
+    .card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      gap: 16px;
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border-hi);
+      background: rgba(255,255,255,0.03);
+      color: var(--text-dim);
+      font-size: 0.88rem;
+    }
+    .status-pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--amber);
+    }
+    .status-pill.run { color: #dcfce7; background: rgba(34,197,94,0.12); }
+    .status-pill.run .dot { background: var(--green); }
+    .status-pill.stopped { color: #fee2e2; background: rgba(239,68,68,0.12); }
+    .status-pill.stopped .dot { background: var(--red); }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .metric {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 15px 15px 12px;
+      background: var(--surface2);
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .metric.turb { background: linear-gradient(180deg, var(--turb-bg), rgba(255,255,255,0.02)); }
+    .metric.pres { background: linear-gradient(180deg, var(--pres-bg), rgba(255,255,255,0.02)); }
+    .metric.temp { background: linear-gradient(180deg, var(--temp-bg), rgba(255,255,255,0.02)); }
+    .metric.cond { background: linear-gradient(180deg, var(--cond-bg), rgba(255,255,255,0.02)); }
+
+    .label {
+      font-size: 0.84rem;
+      color: var(--text-dim);
+      font-weight: 600;
+    }
+
+    .value {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-top: 4px;
+    }
+
+    .unit {
+      font-size: 0.8rem;
+      color: var(--text-mute);
+      margin-top: -3px;
+    }
+
+    .stats {
+      margin-top: 6px;
+      font-size: 0.76rem;
+      color: var(--text-dim);
+      font-family: "JetBrains Mono", monospace;
+      min-height: 16px;
+    }
+
+    canvas {
+      width: 100%;
+      margin-top: auto;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.03);
+    }
+
+    .controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .last-update {
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    .raw-block {
+      margin-top: 14px;
+      border: 1px dashed var(--border-hi);
+      background: rgba(255,255,255,0.025);
+      border-radius: 16px;
+      padding: 12px 13px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: #cfd6e4;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .alerts-section {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+      padding: 18px 20px;
+    }
+
+    .alerts-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .alert-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .alert-item {
+      border: 1px solid rgba(245,158,11,0.25);
+      background: rgba(245,158,11,0.08);
+      color: #fde68a;
+      padding: 11px 13px;
+      border-radius: 14px;
+      font-size: 0.88rem;
+    }
+
+    .al-time {
+      font-family: "JetBrains Mono", monospace;
+      opacity: 0.8;
+      margin-right: 8px;
+    }
+
+    .alert-empty {
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      padding: 4px 0;
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 16px; }
+      .grid { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr; }
+      .controls { flex-direction: column; align-items: stretch; }
+    }
+  </style>
+</head>
+<body>
+<div class="shell">
+  <div class="topbar">
+    <div class="title-wrap">
+      <h1>Monitor CTD</h1>
+      <div class="subtitle">Podgląd na żywo — dwa ESP32 • ROS 2 • Flask UI</div>
+    </div>
+
+    <div class="status-cluster">
+      <div class="conn-box">
+        <div class="conn-dot" id="connDot"></div>
+        <div id="connLabel">Połączono</div>
+      </div>
+
+      <div class="bulk-actions">
+        <button class="btn start" onclick="sendCmd('START','all')">▶ Uruchom wszystkie</button>
+        <button class="btn stop"  onclick="sendCmd('STOP','all')">■ Zatrzymaj wszystkie</button>
+        <button class="btn export" onclick="sendAcquire('all', 10)">⏱ Akwizycja 10s</button>
+        <button class="btn export" onclick="exportCSV()">⤓ Eksport CSV</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="alerts-section">
+    <div class="alerts-title">⚠ Alarmy progowe</div>
+    <div class="alert-list" id="alertList">
+      <div class="alert-empty">Brak alarmów</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DEVICES = ["esp32_1", "esp32_2"];
+const PARAMS = [
+  { key: "FTU",   label: "Mętność",        unit: "FTU",   cls: "turb", warn: 50  },
+  { key: "DBAR",  label: "Ciśnienie",       unit: "dbar",  cls: "pres", warn: 10  },
+  { key: "C",     label: "Temperatura",     unit: "°C",    cls: "temp", warn: 35  },
+  { key: "MS/CM", label: "Przewodność",     unit: "mS/cm", cls: "cond", warn: 5   },
+];
+const HISTORY_LEN = 60;
+const POLL_MS = 500;
+
+// Statusy urządzenia po polsku
+const STATUS_LABELS = {
+  unknown:  "Nieznany",
+  running:  "Działa",
+  stopped:  "Zatrzymany",
+};
+
+// Komunikaty alarmów po polsku
+const ALERT_TMPL = (dev, label, val, unit) =>
+  `${dev}: ${label} przekroczyła próg (${val} ${unit})`;
+
+// Komunikaty akcji po polsku
+const MSG_ACTION_OK   = (msg) => `Akcja OK: ${msg}`;
+const MSG_ACTION_FAIL = (err) => `Akcja BŁĄD: ${err || "nieznany błąd"}`;
+const MSG_REQ_FAIL    = "Akcja BŁĄD: błąd żądania";
+
+const history = {};
+const lastUpdate = {};
+const alerts = [];
+let connected = true;
+
+DEVICES.forEach(d => {
+  history[d] = {};
+  PARAMS.forEach(p => { history[d][p.key] = []; });
+  lastUpdate[d] = null;
+});
+
+const grid = document.getElementById("grid");
+
+DEVICES.forEach((dev, di) => {
+  const num = di + 1;
+  const card = document.createElement("div");
+  card.className = "card";
+  card.id = `card-${dev}`;
+
+  let metricsHTML = PARAMS.map(p =>
+    `<div class="metric ${p.cls}" id="m-${dev}-${p.key.replace('/','-')}">
+       <div class="label">${p.label}</div>
+       <div class="value" id="v-${dev}-${p.key.replace('/','-')}">—</div>
+       <div class="unit">${p.unit}</div>
+       <div class="stats" id="st-${dev}-${p.key.replace('/','-')}"></div>
+       <canvas id="cv-${dev}-${p.key.replace('/','-')}" height="36"></canvas>
+     </div>`
+  ).join("");
+
+  card.innerHTML = `
+    <div class="card-head">
+      <div class="card-title">ESP32 #${num}</div>
+      <div class="status-pill" id="pill-${dev}"><div class="dot"></div><span>${STATUS_LABELS.unknown}</span></div>
+    </div>
+    <div class="metrics">${metricsHTML}</div>
+    <div class="controls">
+      <button class="btn start" onclick="sendCmd('START','${dev}')">▶ Uruchom</button>
+      <button class="btn stop"  onclick="sendCmd('STOP','${dev}')">■ Zatrzymaj</button>
+      <button class="btn export" onclick="sendAcquire('${dev}', 10)">⏱ Akwizycja 10s</button>
+      <div class="last-update" id="ts-${dev}">—</div>
+    </div>
+    <div class="raw-block" id="raw-${dev}">surowe: —</div>
+  `;
+  grid.appendChild(card);
+});
+
+function fmt(v) {
+  return (v === null || v === undefined || Number.isNaN(v)) ? "—" : Number(v).toFixed(2);
+}
+
+function fmtShort(v) {
+  return (v === null || v === undefined || Number.isNaN(v)) ? "—" : Number(v).toFixed(1);
+}
+
+function calcStats(arr) {
+  const vals = arr.filter(v => v !== null && v !== undefined && !Number.isNaN(v));
+  if (!vals.length) return null;
+  const min = Math.min(...vals);
+  const max = Math.max(...vals);
+  const avg = vals.reduce((a,b)=>a+b,0) / vals.length;
+  return { min, max, avg };
+}
+
+const COLOR_MAP = {
+  turb: "#22d3ee",
+  pres: "#a78bfa",
+  temp: "#fb923c",
+  cond: "#4ade80"
+};
+
+function drawSparkline(canvasId, values, color) {
+  const cv = document.getElementById(canvasId);
+  if (!cv) return;
+  const ctx = cv.getContext("2d");
+
+  const dpr = window.devicePixelRatio || 1;
+  const w = cv.clientWidth || 220;
+  const h = cv.clientHeight || 36;
+  cv.width = w * dpr;
+  cv.height = h * dpr;
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  ctx.clearRect(0, 0, w, h);
+
+  const vals = values.map(v => (v === null || v === undefined ? null : Number(v)));
+  const clean = vals.filter(v => v !== null && !Number.isNaN(v));
+  if (clean.length < 2) return;
+
+  const min = Math.min(...clean);
+  const max = Math.max(...clean);
+  const span = (max - min) || 1;
+
+  ctx.beginPath();
+  let started = false;
+
+  vals.forEach((v, i) => {
+    if (v === null || Number.isNaN(v)) return;
+    const x = (i / Math.max(vals.length - 1, 1)) * (w - 2) + 1;
+    const y = h - ((v - min) / span) * (h - 8) - 4;
+    if (!started) {
+      ctx.moveTo(x, y);
+      started = true;
+    } else {
+      ctx.lineTo(x, y);
+    }
+  });
+
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.stroke();
+}
+
+function pushAlert(msg) {
+  const now = new Date().toLocaleTimeString("pl-PL");
+  alerts.unshift({ time: now, msg });
+  if (alerts.length > 20) alerts.pop();
+  renderAlerts();
+}
+
+function checkThresholds(dev, parsed) {
+  PARAMS.forEach(p => {
+    const val = parsed[p.key];
+    if (val !== undefined && val !== null && !Number.isNaN(val) && val > p.warn) {
+      pushAlert(ALERT_TMPL(dev, p.label, val, p.unit));
+    }
+  });
+}
+
+function renderAlerts() {
+  const el = document.getElementById("alertList");
+  if (!alerts.length) {
+    el.innerHTML = '<div class="alert-empty">Brak alarmów</div>';
+    return;
+  }
+  el.innerHTML = alerts.slice(0, 20).map(a =>
+    `<div class="alert-item"><span class="al-time">${a.time}</span> <span class="al-msg">${a.msg}</span></div>`
+  ).join("");
+}
+
+async function refresh() {
+  try {
+    const r = await fetch("/api/data");
+    if (!r.ok) throw new Error(r.status);
+    const j = await r.json();
+    setConnected(true);
+
+    DEVICES.forEach(dev => {
+      const d = j[dev];
+      const parsed = d.parsed || {};
+
+      PARAMS.forEach(p => {
+        const arr = history[dev][p.key];
+        arr.push(parsed[p.key] ?? null);
+        if (arr.length > HISTORY_LEN) arr.shift();
+      });
+
+      PARAMS.forEach(p => {
+        const safeKey = p.key.replace("/", "-");
+        document.getElementById(`v-${dev}-${safeKey}`).textContent = fmt(parsed[p.key]);
+
+        const s = calcStats(history[dev][p.key]);
+        const stEl = document.getElementById(`st-${dev}-${safeKey}`);
+        if (s) {
+          stEl.textContent = `min ${fmtShort(s.min)}  śr ${fmtShort(s.avg)}  max ${fmtShort(s.max)}`;
+        }
+
+        drawSparkline(`cv-${dev}-${safeKey}`, history[dev][p.key], COLOR_MAP[p.cls]);
+      });
+
+      const pill = document.getElementById(`pill-${dev}`);
+      const rs = d.running;
+      pill.className = "status-pill" + (rs === null ? "" : rs ? " run" : " stopped");
+      pill.querySelector("span").textContent =
+        rs === null ? STATUS_LABELS.unknown : rs ? STATUS_LABELS.running : STATUS_LABELS.stopped;
+
+      document.getElementById(`raw-${dev}`).textContent = "surowe: " + (d.raw || "—");
+
+      if (d.raw) lastUpdate[dev] = new Date();
+      const tsEl = document.getElementById(`ts-${dev}`);
+      tsEl.textContent = lastUpdate[dev]
+        ? "Ostatnio: " + lastUpdate[dev].toLocaleTimeString("pl-PL")
+        : "—";
+
+      checkThresholds(dev, parsed);
+    });
+  } catch (e) {
+    setConnected(false);
+  }
+}
+
+function setConnected(ok) {
+  connected = ok;
+  const dot = document.getElementById("connDot");
+  const lbl = document.getElementById("connLabel");
+  dot.className = "conn-dot" + (ok ? "" : " off");
+  lbl.textContent = ok ? "Połączono" : "Utracono połączenie";
+}
+
+async function sendCmd(cmd, which) {
+  try {
+    await fetch("/api/cmd", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ cmd, which })
+    });
+    setTimeout(refresh, 200);
+  } catch (e) {}
+}
+
+async function sendAcquire(which, durationSec) {
+  try {
+    const r = await fetch("/api/acquire", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ which, duration_sec: durationSec })
+    });
+    const j = await r.json();
+    if (j.ok) {
+      pushAlert(MSG_ACTION_OK(j.message));
+    } else {
+      pushAlert(MSG_ACTION_FAIL(j.error || j.message));
+    }
+    setTimeout(refresh, 200);
+  } catch (e) {
+    pushAlert(MSG_REQ_FAIL);
+  }
+}
+
+function exportCSV() {
+  // Nagłówek CSV po polsku
+  let csv = "urządzenie,znacznik_czasu";
+  PARAMS.forEach(p => { csv += "," + p.key; });
+  csv += "\n";
+
+  DEVICES.forEach(dev => {
+    const len = history[dev][PARAMS[0].key].length;
+    for (let i = 0; i < len; i++) {
+      csv += dev + "," + i;
+      PARAMS.forEach(p => {
+        const v = history[dev][p.key][i];
+        csv += "," + (v !== null && v !== undefined ? v : "");
+      });
+      csv += "\n";
+    }
+  });
+
+  const blob = new Blob([csv], { type: "text/csv" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "dane_ctd_" + new Date().toISOString().slice(0,19).replace(/:/g,"-") + ".csv";
+  a.click();
+}
+
+setInterval(refresh, POLL_MS);
+refresh();
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+[0.000000] (-) TimerEvent: {}
+[0.001563] (ctd_interfaces) JobQueued: {'identifier': 'ctd_interfaces', 'dependencies': OrderedDict()}
+[0.001874] (ctd_system) JobQueued: {'identifier': 'ctd_system', 'dependencies': OrderedDict([('ctd_interfaces', '/ws/install/ctd_interfaces')])}
+[0.001970] (ctd_interfaces) JobStarted: {'identifier': 'ctd_interfaces'}
+[0.030923] (ctd_interfaces) JobProgress: {'identifier': 'ctd_interfaces', 'progress': 'cmake'}
+[0.032032] (ctd_interfaces) JobProgress: {'identifier': 'ctd_interfaces', 'progress': 'build'}
+[0.032547] (ctd_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ws/build/ctd_interfaces', '--', '-j10', '-l10'], 'cwd': '/ws/build/ctd_interfaces', 'env': OrderedDict([('HOSTNAME', '5bfa9589eec1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ws/install/ctd_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ws/install/ctd_interfaces:/opt/ros/humble'), ('PWD', '/ws/build/ctd_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ws/install/ctd_interfaces:/opt/ros/humble')]), 'shell': False}
+[0.098568] (-) TimerEvent: {}
+[0.202010] (-) TimerEvent: {}
+[0.268286] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_generator_c\x1b[0m\n'}
+[0.303719] (-) TimerEvent: {}
+[0.340832] (ctd_interfaces) StdoutLine: {'line': b'[  2%] Built target ctd_interfaces__cpp\n'}
+[0.365730] (ctd_interfaces) StdoutLine: {'line': b'[ 12%] Built target ctd_interfaces__rosidl_generator_c\n'}
+[0.405577] (-) TimerEvent: {}
+[0.480570] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[0.482734] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[0.484625] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[0.491683] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[0.494729] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[0.495248] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[0.504007] (ctd_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_ctd_interfaces\n'}
+[0.506516] (-) TimerEvent: {}
+[0.607576] (-) TimerEvent: {}
+[0.613055] (ctd_interfaces) StdoutLine: {'line': b'[ 31%] Built target ctd_interfaces__rosidl_typesupport_c\n'}
+[0.614933] (ctd_interfaces) StdoutLine: {'line': b'[ 34%] Built target ctd_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.686639] (ctd_interfaces) StdoutLine: {'line': b'[ 59%] Built target ctd_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.688915] (ctd_interfaces) StdoutLine: {'line': b'[ 57%] Built target ctd_interfaces__rosidl_typesupport_cpp\n'}
+[0.690651] (ctd_interfaces) StdoutLine: {'line': b'[ 68%] Built target ctd_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.692067] (ctd_interfaces) StdoutLine: {'line': b'[ 76%] Built target ctd_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.708764] (-) TimerEvent: {}
+[0.812315] (-) TimerEvent: {}
+[0.841069] (ctd_interfaces) StdoutLine: {'line': b'[ 76%] Built target ctd_interfaces\n'}
+[0.856412] (ctd_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.856954] (ctd_interfaces) StdoutLine: {'line': b'writing ctd_interfaces.egg-info/PKG-INFO\n'}
+[0.858601] (ctd_interfaces) StdoutLine: {'line': b'writing dependency_links to ctd_interfaces.egg-info/dependency_links.txt\n'}
+[0.860834] (ctd_interfaces) StdoutLine: {'line': b'writing top-level names to ctd_interfaces.egg-info/top_level.txt\n'}
+[0.864114] (ctd_interfaces) StdoutLine: {'line': b"reading manifest file 'ctd_interfaces.egg-info/SOURCES.txt'\n"}
+[0.866280] (ctd_interfaces) StdoutLine: {'line': b"writing manifest file 'ctd_interfaces.egg-info/SOURCES.txt'\n"}
+[0.913281] (-) TimerEvent: {}
+[0.935785] (ctd_interfaces) StdoutLine: {'line': b'[ 76%] Built target ament_cmake_python_build_ctd_interfaces_egg\n'}
+[0.976103] (ctd_interfaces) StdoutLine: {'line': b'[ 78%] Built target ctd_interfaces__py\n'}
+[1.013538] (-) TimerEvent: {}
+[1.044140] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_generator_py\x1b[0m\n'}
+[1.114564] (-) TimerEvent: {}
+[1.132403] (ctd_interfaces) StdoutLine: {'line': b'[ 87%] Built target ctd_interfaces__rosidl_generator_py\n'}
+[1.215551] (-) TimerEvent: {}
+[1.223300] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[1.224334] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[1.225521] (ctd_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target ctd_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[1.316574] (-) TimerEvent: {}
+[1.329854] (ctd_interfaces) StdoutLine: {'line': b'[ 91%] Built target ctd_interfaces__rosidl_typesupport_c__pyext\n'}
+[1.343493] (ctd_interfaces) StdoutLine: {'line': b'[ 95%] Built target ctd_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.345995] (ctd_interfaces) StdoutLine: {'line': b'[100%] Built target ctd_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[1.386080] (ctd_interfaces) CommandEnded: {'returncode': 0}
+[1.388737] (ctd_interfaces) JobProgress: {'identifier': 'ctd_interfaces', 'progress': 'install'}
+[1.417528] (-) TimerEvent: {}
+[1.419531] (ctd_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ws/build/ctd_interfaces'], 'cwd': '/ws/build/ctd_interfaces', 'env': OrderedDict([('HOSTNAME', '5bfa9589eec1'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/ws/install/ctd_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/root'), ('OLDPWD', '/ws/src'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ws/install/ctd_interfaces:/opt/ros/humble'), ('PWD', '/ws/build/ctd_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ws/install/ctd_interfaces:/opt/ros/humble')]), 'shell': False}
+[1.456017] (ctd_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.457414] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ament_index/resource_index/rosidl_interfaces/ctd_interfaces\n'}
+[1.458025] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces\n'}
+[1.458514] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg\n'}
+[1.458859] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[1.459098] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/ctd_measurement.h\n'}
+[1.459348] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail\n'}
+[1.459669] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__struct.h\n'}
+[1.459914] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__type_support.h\n'}
+[1.460102] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__functions.c\n'}
+[1.460327] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__functions.h\n'}
+[1.460508] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action\n'}
+[1.460832] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/acquire_data.h\n'}
+[1.461153] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail\n'}
+[1.461603] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__functions.c\n'}
+[1.461924] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__type_support.h\n'}
+[1.462261] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__struct.h\n'}
+[1.462530] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__functions.h\n'}
+[1.462736] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv\n'}
+[1.463094] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail\n'}
+[1.463585] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__functions.c\n'}
+[1.463945] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__struct.h\n'}
+[1.464150] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__functions.h\n'}
+[1.464330] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__type_support.h\n'}
+[1.464524] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/set_acquisition.h\n'}
+[1.464825] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/library_path.sh\n'}
+[1.465131] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/library_path.dsv\n'}
+[1.467041] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_generator_c.so\n'}
+[1.467900] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces\n'}
+[1.468272] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg\n'}
+[1.468667] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail\n'}
+[1.469244] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__rosidl_typesupport_fastrtps_c.h\n'}
+[1.469468] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[1.469719] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action\n'}
+[1.470069] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail\n'}
+[1.470404] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__rosidl_typesupport_fastrtps_c.h\n'}
+[1.470758] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv\n'}
+[1.471053] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail\n'}
+[1.471387] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__rosidl_typesupport_fastrtps_c.h\n'}
+[1.471879] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[1.472578] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces\n'}
+[1.473021] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg\n'}
+[1.473346] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail\n'}
+[1.473653] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__rosidl_typesupport_introspection_c.h\n'}
+[1.473881] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__type_support.c\n'}
+[1.474068] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[1.474287] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action\n'}
+[1.474566] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail\n'}
+[1.474978] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__rosidl_typesupport_introspection_c.h\n'}
+[1.475265] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__type_support.c\n'}
+[1.475544] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv\n'}
+[1.476038] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail\n'}
+[1.476366] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__type_support.c\n'}
+[1.476588] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__rosidl_typesupport_introspection_c.h\n'}
+[1.476995] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[1.477698] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_c.so\n'}
+[1.478405] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces\n'}
+[1.478815] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg\n'}
+[1.479169] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail\n'}
+[1.479515] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__builder.hpp\n'}
+[1.479749] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__struct.hpp\n'}
+[1.480142] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__type_support.hpp\n'}
+[1.480394] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__traits.hpp\n'}
+[1.480742] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[1.480929] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/ctd_measurement.hpp\n'}
+[1.481194] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action\n'}
+[1.481456] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/acquire_data.hpp\n'}
+[1.481733] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail\n'}
+[1.482079] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__traits.hpp\n'}
+[1.482276] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__builder.hpp\n'}
+[1.482575] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__type_support.hpp\n'}
+[1.482881] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__struct.hpp\n'}
+[1.483138] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv\n'}
+[1.483460] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/set_acquisition.hpp\n'}
+[1.483743] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail\n'}
+[1.484067] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__struct.hpp\n'}
+[1.484243] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__type_support.hpp\n'}
+[1.484442] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__builder.hpp\n'}
+[1.484864] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__traits.hpp\n'}
+[1.485190] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces\n'}
+[1.485543] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg\n'}
+[1.485891] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[1.486139] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail\n'}
+[1.486470] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.486714] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/dds_fastrtps\n'}
+[1.487033] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action\n'}
+[1.487601] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail\n'}
+[1.488067] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/dds_fastrtps\n'}
+[1.488452] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.488711] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv\n'}
+[1.489105] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail\n'}
+[1.489415] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[1.489708] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/dds_fastrtps\n'}
+[1.490212] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[1.490898] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces\n'}
+[1.491409] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg\n'}
+[1.491990] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail\n'}
+[1.492325] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.492610] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__type_support.cpp\n'}
+[1.492884] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action\n'}
+[1.493180] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail\n'}
+[1.493544] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.493793] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__type_support.cpp\n'}
+[1.494035] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv\n'}
+[1.494574] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail\n'}
+[1.495075] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__type_support.cpp\n'}
+[1.495341] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__rosidl_typesupport_introspection_cpp.hpp\n'}
+[1.495695] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[1.496261] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_cpp.so\n'}
+[1.496737] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/pythonpath.sh\n'}
+[1.497008] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/pythonpath.dsv\n'}
+[1.497257] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info\n'}
+[1.497786] (ctd_interfaces) StdoutLine: {'line': b'-- Installing: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info/PKG-INFO\n'}
+[1.499496] (ctd_interfaces) StdoutLine: {'line': b'-- Installing: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info/SOURCES.txt\n'}
+[1.500829] (ctd_interfaces) StdoutLine: {'line': b'-- Installing: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info/top_level.txt\n'}
+[1.502015] (ctd_interfaces) StdoutLine: {'line': b'-- Installing: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info/dependency_links.txt\n'}
+[1.502907] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces\n'}
+[1.503341] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.503610] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg\n'}
+[1.503956] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg/_ctd_measurement.py\n'}
+[1.504143] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg/__init__.py\n'}
+[1.504282] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg/_ctd_measurement_s.c\n'}
+[1.504409] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/libctd_interfaces__rosidl_generator_py.so\n'}
+[1.504569] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/__init__.py\n'}
+[1.504790] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.505046] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/_ctd_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[1.505312] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action\n'}
+[1.505591] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action/_acquire_data.py\n'}
+[1.505841] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action/__init__.py\n'}
+[1.505970] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action/_acquire_data_s.c\n'}
+[1.506095] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.506227] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/_ctd_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[1.506359] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv\n'}
+[1.506679] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv/_set_acquisition_s.c\n'}
+[1.506950] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv/__init__.py\n'}
+[1.507209] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv/_set_acquisition.py\n'}
+[1.507372] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/_ctd_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[1.518503] (-) TimerEvent: {}
+[1.589187] (ctd_interfaces) StdoutLine: {'line': b"Listing '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces'...\n"}
+[1.592817] (ctd_interfaces) StdoutLine: {'line': b"Listing '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action'...\n"}
+[1.593009] (ctd_interfaces) StdoutLine: {'line': b"Listing '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg'...\n"}
+[1.593142] (ctd_interfaces) StdoutLine: {'line': b"Listing '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv'...\n"}
+[1.593764] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.594371] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.594902] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[1.595423] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_generator_py.so\n'}
+[1.595902] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/msg/CtdMeasurement.idl\n'}
+[1.596172] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/srv/SetAcquisition.idl\n'}
+[1.596406] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/action/AcquireData.idl\n'}
+[1.596613] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/msg/CtdMeasurement.msg\n'}
+[1.596878] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/srv/SetAcquisition.srv\n'}
+[1.597268] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/srv/SetAcquisition_Request.msg\n'}
+[1.597622] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/srv/SetAcquisition_Response.msg\n'}
+[1.597976] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/action/AcquireData.action\n'}
+[1.598421] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ament_index/resource_index/package_run_dependencies/ctd_interfaces\n'}
+[1.598831] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ament_index/resource_index/parent_prefix_path/ctd_interfaces\n'}
+[1.599112] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/ament_prefix_path.sh\n'}
+[1.599362] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/ament_prefix_path.dsv\n'}
+[1.599732] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/path.sh\n'}
+[1.600138] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/path.dsv\n'}
+[1.600523] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/local_setup.bash\n'}
+[1.600794] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/local_setup.sh\n'}
+[1.601091] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/local_setup.zsh\n'}
+[1.601345] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/local_setup.dsv\n'}
+[1.601634] (ctd_interfaces) StdoutLine: {'line': b'-- Installing: /ws/install/ctd_interfaces/share/ctd_interfaces/package.dsv\n'}
+[1.602785] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ament_index/resource_index/packages/ctd_interfaces\n'}
+[1.603667] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_cExport.cmake\n'}
+[1.604029] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[1.604473] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[1.604713] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[1.605223] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[1.605445] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[1.605814] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[1.606017] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[1.606369] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_cppExport.cmake\n'}
+[1.606712] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[1.606972] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[1.607367] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[1.607671] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[1.608167] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[1.608390] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[1.608771] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_pyExport.cmake\n'}
+[1.609012] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[1.609201] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[1.609373] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[1.609507] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[1.609640] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[1.609775] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[1.609921] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[1.610056] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[1.610294] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfacesConfig.cmake\n'}
+[1.610556] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfacesConfig-version.cmake\n'}
+[1.610830] (ctd_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/package.xml\n'}
+[1.616392] (ctd_interfaces) CommandEnded: {'returncode': 0}
+[1.619497] (-) TimerEvent: {}
+[1.644457] (ctd_interfaces) JobEnded: {'identifier': 'ctd_interfaces', 'rc': 0}
+[1.645726] (ctd_system) JobStarted: {'identifier': 'ctd_system'}
+[1.721316] (-) TimerEvent: {}
+[1.824338] (-) TimerEvent: {}
+[1.926769] (-) TimerEvent: {}
+[2.032583] (-) TimerEvent: {}
+[2.137043] (-) TimerEvent: {}
+[2.145492] (ctd_system) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ctd_system', 'build', '--build-base', '/ws/build/ctd_system/build', 'install', '--record', '/ws/build/ctd_system/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/ws/src/ctd_system', 'env': {'HOSTNAME': '5bfa9589eec1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/ws/install/ctd_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/ws/src', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/ws/install/ctd_interfaces:/opt/ros/humble', 'PWD': '/ws/build/ctd_system', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ws/build/ctd_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/ctd_system/lib/python3.10/site-packages:/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/ws/install/ctd_interfaces'}, 'shell': False}
+[2.237570] (-) TimerEvent: {}
+[2.318416] (ctd_system) StdoutLine: {'line': b'running egg_info\n'}
+[2.320022] (ctd_system) StdoutLine: {'line': b'creating ../../build/ctd_system/ctd_system.egg-info\n'}
+[2.320412] (ctd_system) StdoutLine: {'line': b'writing ../../build/ctd_system/ctd_system.egg-info/PKG-INFO\n'}
+[2.321231] (ctd_system) StdoutLine: {'line': b'writing dependency_links to ../../build/ctd_system/ctd_system.egg-info/dependency_links.txt\n'}
+[2.321683] (ctd_system) StdoutLine: {'line': b'writing entry points to ../../build/ctd_system/ctd_system.egg-info/entry_points.txt\n'}
+[2.322170] (ctd_system) StdoutLine: {'line': b'writing requirements to ../../build/ctd_system/ctd_system.egg-info/requires.txt\n'}
+[2.322495] (ctd_system) StdoutLine: {'line': b'writing top-level names to ../../build/ctd_system/ctd_system.egg-info/top_level.txt\n'}
+[2.322902] (ctd_system) StdoutLine: {'line': b"writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'\n"}
+[2.324514] (ctd_system) StdoutLine: {'line': b"reading manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'\n"}
+[2.325311] (ctd_system) StdoutLine: {'line': b"writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'\n"}
+[2.325504] (ctd_system) StdoutLine: {'line': b'running build\n'}
+[2.325660] (ctd_system) StdoutLine: {'line': b'running build_py\n'}
+[2.325908] (ctd_system) StdoutLine: {'line': b'creating /ws/build/ctd_system/build\n'}
+[2.326308] (ctd_system) StdoutLine: {'line': b'creating /ws/build/ctd_system/build/lib\n'}
+[2.326555] (ctd_system) StdoutLine: {'line': b'creating /ws/build/ctd_system/build/lib/ctd_system\n'}
+[2.326769] (ctd_system) StdoutLine: {'line': b'copying ctd_system/__init__.py -> /ws/build/ctd_system/build/lib/ctd_system\n'}
+[2.327711] (ctd_system) StdoutLine: {'line': b'running install\n'}
+[2.327928] (ctd_system) StdoutLine: {'line': b'running install_lib\n'}
+[2.328208] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[2.328444] (ctd_system) StdoutLine: {'line': b'copying /ws/build/ctd_system/build/lib/ctd_system/__init__.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system\n'}
+[2.329312] (ctd_system) StdoutLine: {'line': b'byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/__init__.py to __init__.cpython-310.pyc\n'}
+[2.330560] (ctd_system) StdoutLine: {'line': b'running install_data\n'}
+[2.330867] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/share/ament_index\n'}
+[2.331183] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/share/ament_index/resource_index\n'}
+[2.331377] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/share/ament_index/resource_index/packages\n'}
+[2.331586] (ctd_system) StdoutLine: {'line': b'copying resource/ctd_system -> /ws/install/ctd_system/share/ament_index/resource_index/packages\n'}
+[2.331973] (ctd_system) StdoutLine: {'line': b'copying package.xml -> /ws/install/ctd_system/share/ctd_system\n'}
+[2.332479] (ctd_system) StdoutLine: {'line': b'creating /ws/install/ctd_system/share/ctd_system/launch\n'}
+[2.333728] (ctd_system) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.333989] (ctd_system) StdoutLine: {'line': b'Copying ../../build/ctd_system/ctd_system.egg-info to /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system-0.0.1-py3.10.egg-info\n'}
+[2.337840] (ctd_system) StdoutLine: {'line': b'running install_scripts\n'}
+[2.338791] (-) TimerEvent: {}
+[2.356446] (ctd_system) StdoutLine: {'line': b'Installing acquire_action_client script to /ws/install/ctd_system/lib/ctd_system\n'}
+[2.357053] (ctd_system) StdoutLine: {'line': b'Installing acquire_action_server script to /ws/install/ctd_system/lib/ctd_system\n'}
+[2.357510] (ctd_system) StdoutLine: {'line': b'Installing command_client script to /ws/install/ctd_system/lib/ctd_system\n'}
+[2.357989] (ctd_system) StdoutLine: {'line': b'Installing command_service script to /ws/install/ctd_system/lib/ctd_system\n'}
+[2.358445] (ctd_system) StdoutLine: {'line': b'Installing sensor_bridge script to /ws/install/ctd_system/lib/ctd_system\n'}
+[2.359151] (ctd_system) StdoutLine: {'line': b"writing list of installed files to '/ws/build/ctd_system/install.log'\n"}
+[2.373179] (ctd_system) CommandEnded: {'returncode': 0}
+[2.381912] (ctd_system) JobEnded: {'identifier': 'ctd_system', 'rc': 0}
+[2.382938] (-) EventReactorShutdown: {}

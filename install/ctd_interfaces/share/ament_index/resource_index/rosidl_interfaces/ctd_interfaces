@@ -1,0 +1,8 @@
+action/AcquireData.action
+action/AcquireData.idl
+msg/CtdMeasurement.idl
+msg/CtdMeasurement.msg
+srv/SetAcquisition.idl
+srv/SetAcquisition.srv
+srv/SetAcquisition_Request.msg
+srv/SetAcquisition_Response.msg

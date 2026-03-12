@@ -1,0 +1,8 @@
+{
+  "package_name": "ctd_interfaces",
+  "non_idl_tuples": [
+    "/ws/src/ctd_interfaces:msg/CtdMeasurement.msg",
+    "/ws/src/ctd_interfaces:srv/SetAcquisition.srv",
+    "/ws/src/ctd_interfaces:action/AcquireData.action"
+  ]
+}

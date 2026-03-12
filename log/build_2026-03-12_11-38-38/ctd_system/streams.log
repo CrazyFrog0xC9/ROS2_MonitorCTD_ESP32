@@ -1,0 +1,55 @@
+[0.503s] Invoking command in '/ws/src/ctd_system': PYTHONPATH=/ws/build/ctd_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/ctd_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ctd_system build --build-base /ws/build/ctd_system/build install --record /ws/build/ctd_system/install.log --single-version-externally-managed install_data
+[0.681s] running egg_info
+[0.682s] creating ../../build/ctd_system/ctd_system.egg-info
+[0.682s] writing ../../build/ctd_system/ctd_system.egg-info/PKG-INFO
+[0.683s] writing dependency_links to ../../build/ctd_system/ctd_system.egg-info/dependency_links.txt
+[0.684s] writing entry points to ../../build/ctd_system/ctd_system.egg-info/entry_points.txt
+[0.684s] writing requirements to ../../build/ctd_system/ctd_system.egg-info/requires.txt
+[0.684s] writing top-level names to ../../build/ctd_system/ctd_system.egg-info/top_level.txt
+[0.685s] writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'
+[0.686s] reading manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'
+[0.687s] writing manifest file '../../build/ctd_system/ctd_system.egg-info/SOURCES.txt'
+[0.687s] running build
+[0.687s] running build_py
+[0.688s] creating /ws/build/ctd_system/build
+[0.688s] creating /ws/build/ctd_system/build/lib
+[0.688s] creating /ws/build/ctd_system/build/lib/ctd_system
+[0.689s] copying ctd_system/command_service.py -> /ws/build/ctd_system/build/lib/ctd_system
+[0.689s] copying ctd_system/command_client.py -> /ws/build/ctd_system/build/lib/ctd_system
+[0.690s] copying ctd_system/acquire_action_client.py -> /ws/build/ctd_system/build/lib/ctd_system
+[0.690s] copying ctd_system/sensor_bridge_node.py -> /ws/build/ctd_system/build/lib/ctd_system
+[0.690s] copying ctd_system/__init__.py -> /ws/build/ctd_system/build/lib/ctd_system
+[0.691s] copying ctd_system/acquire_action_server.py -> /ws/build/ctd_system/build/lib/ctd_system
+[0.692s] running install
+[0.692s] running install_lib
+[0.693s] creating /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.693s] copying /ws/build/ctd_system/build/lib/ctd_system/command_service.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.694s] copying /ws/build/ctd_system/build/lib/ctd_system/command_client.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.694s] copying /ws/build/ctd_system/build/lib/ctd_system/acquire_action_client.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.695s] copying /ws/build/ctd_system/build/lib/ctd_system/sensor_bridge_node.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.695s] copying /ws/build/ctd_system/build/lib/ctd_system/__init__.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.696s] copying /ws/build/ctd_system/build/lib/ctd_system/acquire_action_server.py -> /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system
+[0.697s] byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/command_service.py to command_service.cpython-310.pyc
+[0.701s] byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/command_client.py to command_client.cpython-310.pyc
+[0.702s] byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/acquire_action_client.py to acquire_action_client.cpython-310.pyc
+[0.703s] byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/sensor_bridge_node.py to sensor_bridge_node.cpython-310.pyc
+[0.704s] byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/__init__.py to __init__.cpython-310.pyc
+[0.705s] byte-compiling /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system/acquire_action_server.py to acquire_action_server.cpython-310.pyc
+[0.706s] running install_data
+[0.706s] creating /ws/install/ctd_system/share/ament_index
+[0.706s] creating /ws/install/ctd_system/share/ament_index/resource_index
+[0.707s] creating /ws/install/ctd_system/share/ament_index/resource_index/packages
+[0.707s] copying resource/ctd_system -> /ws/install/ctd_system/share/ament_index/resource_index/packages
+[0.707s] copying package.xml -> /ws/install/ctd_system/share/ctd_system
+[0.707s] creating /ws/install/ctd_system/share/ctd_system/launch
+[0.708s] copying launch/system.launch.py -> /ws/install/ctd_system/share/ctd_system/launch
+[0.709s] running install_egg_info
+[0.710s] Copying ../../build/ctd_system/ctd_system.egg-info to /ws/install/ctd_system/lib/python3.10/site-packages/ctd_system-0.0.1-py3.10.egg-info
+[0.714s] running install_scripts
+[0.732s] Installing acquire_action_client script to /ws/install/ctd_system/lib/ctd_system
+[0.733s] Installing acquire_action_server script to /ws/install/ctd_system/lib/ctd_system
+[0.733s] Installing command_client script to /ws/install/ctd_system/lib/ctd_system
+[0.734s] Installing command_service script to /ws/install/ctd_system/lib/ctd_system
+[0.734s] Installing sensor_bridge script to /ws/install/ctd_system/lib/ctd_system
+[0.735s] writing list of installed files to '/ws/build/ctd_system/install.log'
+[0.750s] Invoked command in '/ws/src/ctd_system' returned '0': PYTHONPATH=/ws/build/ctd_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ws/install/ctd_system/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ctd_system build --build-base /ws/build/ctd_system/build install --record /ws/build/ctd_system/install.log --single-version-externally-managed install_data

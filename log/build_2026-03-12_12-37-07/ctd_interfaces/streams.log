@@ -1,0 +1,218 @@
+[0.038s] Invoking command in '/ws/build/ctd_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ws/build/ctd_interfaces -- -j10 -l10
+[0.324s] [  2%] Built target ctd_interfaces__cpp
+[0.342s] [ 12%] Built target ctd_interfaces__rosidl_generator_c
+[0.409s] [ 12%] Built target ament_cmake_python_copy_ctd_interfaces
+[0.531s] [ 42%] Built target ctd_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.534s] [ 42%] Built target ctd_interfaces__rosidl_typesupport_introspection_cpp
+[0.536s] [ 44%] Built target ctd_interfaces__rosidl_typesupport_cpp
+[0.545s] [ 55%] Built target ctd_interfaces__rosidl_typesupport_c
+[0.561s] [ 76%] Built target ctd_interfaces__rosidl_typesupport_introspection_c
+[0.562s] [ 76%] Built target ctd_interfaces__rosidl_typesupport_fastrtps_c
+[0.715s] [ 76%] Built target ctd_interfaces
+[0.762s] running egg_info
+[0.762s] writing ctd_interfaces.egg-info/PKG-INFO
+[0.763s] writing dependency_links to ctd_interfaces.egg-info/dependency_links.txt
+[0.764s] writing top-level names to ctd_interfaces.egg-info/top_level.txt
+[0.772s] reading manifest file 'ctd_interfaces.egg-info/SOURCES.txt'
+[0.773s] writing manifest file 'ctd_interfaces.egg-info/SOURCES.txt'
+[0.828s] [ 76%] Built target ament_cmake_python_build_ctd_interfaces_egg
+[0.852s] [ 78%] Built target ctd_interfaces__py
+[0.987s] [ 87%] Built target ctd_interfaces__rosidl_generator_py
+[1.140s] [ 91%] Built target ctd_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.144s] [ 95%] Built target ctd_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.147s] [100%] Built target ctd_interfaces__rosidl_typesupport_c__pyext
+[1.186s] Invoked command in '/ws/build/ctd_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ws/build/ctd_interfaces -- -j10 -l10
+[1.222s] Invoking command in '/ws/build/ctd_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ws/build/ctd_interfaces
+[1.260s] -- Install configuration: ""
+[1.261s] -- Up-to-date: /ws/install/ctd_interfaces/share/ament_index/resource_index/rosidl_interfaces/ctd_interfaces
+[1.262s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces
+[1.263s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg
+[1.263s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.263s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/ctd_measurement.h
+[1.264s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail
+[1.264s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__struct.h
+[1.264s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__type_support.h
+[1.264s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__functions.c
+[1.265s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__functions.h
+[1.265s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action
+[1.266s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/acquire_data.h
+[1.266s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail
+[1.266s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__functions.c
+[1.267s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__type_support.h
+[1.267s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__struct.h
+[1.267s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__functions.h
+[1.267s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv
+[1.268s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail
+[1.269s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__functions.c
+[1.269s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__struct.h
+[1.269s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__functions.h
+[1.269s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__type_support.h
+[1.269s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/set_acquisition.h
+[1.270s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/library_path.sh
+[1.270s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/library_path.dsv
+[1.273s] -- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_generator_c.so
+[1.274s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces
+[1.274s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg
+[1.274s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail
+[1.275s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__rosidl_typesupport_fastrtps_c.h
+[1.275s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.276s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action
+[1.276s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail
+[1.276s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__rosidl_typesupport_fastrtps_c.h
+[1.276s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv
+[1.277s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail
+[1.278s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__rosidl_typesupport_fastrtps_c.h
+[1.278s] -- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.279s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces
+[1.279s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg
+[1.280s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail
+[1.280s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__rosidl_typesupport_introspection_c.h
+[1.280s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__type_support.c
+[1.280s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.281s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action
+[1.281s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail
+[1.281s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__rosidl_typesupport_introspection_c.h
+[1.282s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__type_support.c
+[1.282s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv
+[1.282s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail
+[1.282s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__type_support.c
+[1.283s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__rosidl_typesupport_introspection_c.h
+[1.283s] -- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_introspection_c.so
+[1.284s] -- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_c.so
+[1.284s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces
+[1.285s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg
+[1.285s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail
+[1.285s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__builder.hpp
+[1.286s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__struct.hpp
+[1.286s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__type_support.hpp
+[1.286s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__traits.hpp
+[1.286s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.286s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/ctd_measurement.hpp
+[1.286s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action
+[1.287s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/acquire_data.hpp
+[1.287s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail
+[1.287s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__traits.hpp
+[1.288s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__builder.hpp
+[1.288s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__type_support.hpp
+[1.288s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__struct.hpp
+[1.288s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv
+[1.289s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/set_acquisition.hpp
+[1.289s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail
+[1.289s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__struct.hpp
+[1.290s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__type_support.hpp
+[1.290s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__builder.hpp
+[1.290s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__traits.hpp
+[1.290s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces
+[1.291s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg
+[1.291s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.291s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail
+[1.292s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__rosidl_typesupport_fastrtps_cpp.hpp
+[1.292s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/dds_fastrtps
+[1.292s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action
+[1.293s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail
+[1.293s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/dds_fastrtps
+[1.293s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__rosidl_typesupport_fastrtps_cpp.hpp
+[1.294s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv
+[1.294s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail
+[1.294s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__rosidl_typesupport_fastrtps_cpp.hpp
+[1.295s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/dds_fastrtps
+[1.296s] -- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.296s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces
+[1.297s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg
+[1.297s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail
+[1.297s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__rosidl_typesupport_introspection_cpp.hpp
+[1.298s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/msg/detail/ctd_measurement__type_support.cpp
+[1.298s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action
+[1.298s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail
+[1.298s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__rosidl_typesupport_introspection_cpp.hpp
+[1.299s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/action/detail/acquire_data__type_support.cpp
+[1.299s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv
+[1.299s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail
+[1.300s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__type_support.cpp
+[1.300s] -- Up-to-date: /ws/install/ctd_interfaces/include/ctd_interfaces/ctd_interfaces/srv/detail/set_acquisition__rosidl_typesupport_introspection_cpp.hpp
+[1.300s] -- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.301s] -- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_typesupport_cpp.so
+[1.301s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/pythonpath.sh
+[1.302s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/pythonpath.dsv
+[1.302s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info
+[1.303s] -- Installing: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info/PKG-INFO
+[1.304s] -- Installing: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info/SOURCES.txt
+[1.305s] -- Installing: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info/top_level.txt
+[1.306s] -- Installing: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces-0.0.1-py3.10.egg-info/dependency_links.txt
+[1.307s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces
+[1.308s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.308s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg
+[1.308s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg/_ctd_measurement.py
+[1.309s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg/__init__.py
+[1.309s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg/_ctd_measurement_s.c
+[1.309s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/libctd_interfaces__rosidl_generator_py.so
+[1.309s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/__init__.py
+[1.310s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.310s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/_ctd_interfaces_s.ep.rosidl_typesupport_c.c
+[1.310s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action
+[1.310s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action/_acquire_data.py
+[1.311s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action/__init__.py
+[1.311s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action/_acquire_data_s.c
+[1.311s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.311s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/_ctd_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.312s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv
+[1.312s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv/_set_acquisition_s.c
+[1.312s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv/__init__.py
+[1.313s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv/_set_acquisition.py
+[1.314s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/_ctd_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[1.400s] Listing '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces'...
+[1.400s] Listing '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/action'...
+[1.400s] Listing '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/msg'...
+[1.400s] Listing '/ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/srv'...
+[1.401s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.402s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.403s] -- Up-to-date: /ws/install/ctd_interfaces/local/lib/python3.10/dist-packages/ctd_interfaces/ctd_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.404s] -- Up-to-date: /ws/install/ctd_interfaces/lib/libctd_interfaces__rosidl_generator_py.so
+[1.404s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/msg/CtdMeasurement.idl
+[1.404s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/srv/SetAcquisition.idl
+[1.405s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/action/AcquireData.idl
+[1.405s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/msg/CtdMeasurement.msg
+[1.405s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/srv/SetAcquisition.srv
+[1.405s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/srv/SetAcquisition_Request.msg
+[1.406s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/srv/SetAcquisition_Response.msg
+[1.406s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/action/AcquireData.action
+[1.406s] -- Up-to-date: /ws/install/ctd_interfaces/share/ament_index/resource_index/package_run_dependencies/ctd_interfaces
+[1.407s] -- Up-to-date: /ws/install/ctd_interfaces/share/ament_index/resource_index/parent_prefix_path/ctd_interfaces
+[1.407s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/ament_prefix_path.sh
+[1.407s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/ament_prefix_path.dsv
+[1.408s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/path.sh
+[1.408s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/environment/path.dsv
+[1.408s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/local_setup.bash
+[1.409s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/local_setup.sh
+[1.409s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/local_setup.zsh
+[1.409s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/local_setup.dsv
+[1.409s] -- Installing: /ws/install/ctd_interfaces/share/ctd_interfaces/package.dsv
+[1.411s] -- Up-to-date: /ws/install/ctd_interfaces/share/ament_index/resource_index/packages/ctd_interfaces
+[1.412s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_cExport.cmake
+[1.412s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.413s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.413s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.414s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.414s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.415s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_cExport.cmake
+[1.415s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.416s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_cppExport.cmake
+[1.416s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.417s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.417s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.418s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.418s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_cppExport.cmake
+[1.418s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.419s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_pyExport.cmake
+[1.419s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/export_ctd_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[1.420s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.420s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.420s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.420s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.420s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.420s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.421s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.421s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfacesConfig.cmake
+[1.421s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/cmake/ctd_interfacesConfig-version.cmake
+[1.422s] -- Up-to-date: /ws/install/ctd_interfaces/share/ctd_interfaces/package.xml
+[1.428s] Invoked command in '/ws/build/ctd_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ws/build/ctd_interfaces
